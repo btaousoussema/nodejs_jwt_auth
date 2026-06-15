@@ -1,7 +1,7 @@
-const db = require('../database/dbconnection.js');
-const { validateUser, getUserByEmail } = require('./userController');
+const db = require('../models/dbconnection.js');
+const { validateUser, getUserByEmail } = require('./userController.js');
 const jwt = require('jsonwebtoken');
-const generateRefreshToken = require('./refreshTokenController');
+const generateRefreshToken = require('../services/refreshTokenService.js');
 
 require('dotenv').config();
 

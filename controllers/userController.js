@@ -1,4 +1,4 @@
-const db = require('../database/dbconnection.js');
+const db = require('../models/dbconnection.js');
 const bcrypt = require('bcrypt');
 
 async function getUser(req, res) {    

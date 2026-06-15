@@ -1,4 +1,4 @@
-const db = require('../database/dbConnection.js');
+const db = require('../models/dbConnection.js');
 
 const getContacts = async (req, res) => {    
     console.log('Fetching contacts from the database...');
@@ -7,7 +7,7 @@ const getContacts = async (req, res) => {
     res.send(contacts.rows);
 };
 
-const createContact = (req, res) => {
+const createContact = async (req, res) => {
     const { email, message} = req.body;
     res.send(`Hello, ${email}! Your message has been received.`);
 };
