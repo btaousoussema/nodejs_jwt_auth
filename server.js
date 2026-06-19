@@ -7,6 +7,7 @@ const corsOptions = require('./config/corsOptions');
 const app = express();
 const authRoutes = require('./routes/authRoutes.js');
 const refreshTokenRoutes = require('./routes/refreshTokenRoutes.js');
+const logoutRoutes = require('./routes/logoutRoutes.js');
 
 app.use(cors(corsOptions));
 app.use(express.json());
@@ -15,6 +16,7 @@ app.use(express.json());
 app.use('/users', userRoutes);
 app.use('/contacts', contactRoutes);
 app.use('/auth', authRoutes);
+app.use('/logout', logoutRoutes);
 const cookieParser = require('cookie-parser');
 app.use(cookieParser());
 app.use('/refreshToken', refreshTokenRoutes);
