@@ -1,13 +1,13 @@
 const express = require('express');
 const router = express.Router();
 const cors = require('cors');
-const userRoutes = require('./routes/userRoutes.js');
-const contactRoutes = require('./routes/contactRoutes.js');
+const userRoutes = require('./routes/user.js');
+const contactRoutes = require('./routes/contact.js');
 const corsOptions = require('./config/corsOptions');
 const app = express();
-const authRoutes = require('./routes/authRoutes.js');
-const refreshTokenRoutes = require('./routes/refreshTokenRoutes.js');
-const logoutRoutes = require('./routes/logoutRoutes.js');
+const authRoutes = require('./routes/auth.js');
+const refreshTokenRoutes = require('./routes/refreshToken.js');
+const logoutRoutes = require('./routes/logout.js');
 
 app.use(cors(corsOptions));
 app.use(express.json());
